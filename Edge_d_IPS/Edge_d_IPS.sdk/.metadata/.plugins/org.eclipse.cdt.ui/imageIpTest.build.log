@@ -1,0 +1,8 @@
+00:17:20 **** Auto Build of configuration Debug for project imageIpTest ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+
+00:17:21 Build Finished (took 328ms)
+

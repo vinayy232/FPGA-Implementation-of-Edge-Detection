@@ -1,0 +1,542 @@
+
+*** Running vivado
+    with args -log imageProcessTop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source imageProcessTop.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source imageProcessTop.tcl -notrace
+Command: synth_design -top imageProcessTop -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8692 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 398.785 ; gain = 99.539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'imageProcessTop' [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageProcessTop.v:23]
+INFO: [Synth 8-638] synthesizing module 'imageControl' [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:23]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter RD_BUFFER bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'lineBuffer' [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lineBuffer' (1#1) [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:23]
+INFO: [Synth 8-256] done synthesizing module 'imageControl' (2#1) [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:23]
+INFO: [Synth 8-638] synthesizing module 'conv' [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:23]
+INFO: [Synth 8-256] done synthesizing module 'conv' (3#1) [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:23]
+INFO: [Synth 8-638] synthesizing module 'outputBuffer' [V:/viv_wd/Edge_detection/Edge_detection.runs/synth_1/.Xil/Vivado-20948-vinayy232/realtime/outputBuffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'outputBuffer' (4#1) [V:/viv_wd/Edge_detection/Edge_detection.runs/synth_1/.Xil/Vivado-20948-vinayy232/realtime/outputBuffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'imageProcessTop' (5#1) [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageProcessTop.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 451.094 ; gain = 151.848
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 451.094 ; gain = 151.848
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [V:/viv_wd/Edge_detection/Edge_detection.runs/synth_1/.Xil/Vivado-20948-vinayy232/dcp1/outputBuffer_in_context.xdc] for cell 'OB'
+Finished Parsing XDC File [V:/viv_wd/Edge_detection/Edge_detection.runs/synth_1/.Xil/Vivado-20948-vinayy232/dcp1/outputBuffer_in_context.xdc] for cell 'OB'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 804.781 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 804.781 ; gain = 505.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 804.781 ; gain = 505.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for OB. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 804.781 ; gain = 505.535
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element wrPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:45]
+WARNING: [Synth 8-6014] Unused sequential element rdPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:50]
+INFO: [Synth 8-4471] merging register 'rdState_reg' into 'rd_line_buffer_reg' [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:69]
+WARNING: [Synth 8-6014] Unused sequential element rdState_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:69]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:58]
+INFO: [Synth 8-5546] ROM "rdState" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element totalPixelCounter_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:55]
+WARNING: [Synth 8-6014] Unused sequential element pixelCounter_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:99]
+WARNING: [Synth 8-6014] Unused sequential element rdCounter_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:129]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[1] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[2] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[3] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[4] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[5] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[6] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[7] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[8] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[0] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[1] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[2] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[3] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[4] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[5] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[6] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[7] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[8] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[0] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element multData2_reg[1] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:76]
+WARNING: [Synth 8-6014] Unused sequential element multData1_reg[1] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 804.781 ; gain = 505.535
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 18    
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                9 Bit    Registers := 10    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   4 Input     72 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module lineBuffer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 4     
++---Registers : 
+	                9 Bit    Registers := 2     
+Module imageControl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	                9 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     72 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module conv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'conv/multData1_reg[0][10:0]' into 'conv/multData2_reg[0][10:0]' [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+INFO: [Synth 8-4471] merging register 'conv/multData1_reg[8][10:0]' into 'conv/multData2_reg[8][10:0]' [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+INFO: [Synth 8-4471] merging register 'conv/multData1_reg[4][10:0]' into 'conv/multData2_reg[4][10:0]' [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element conv/multData1_reg[0] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element conv/multData1_reg[8] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+WARNING: [Synth 8-6014] Unused sequential element conv/multData1_reg[4] was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:75]
+INFO: [Synth 8-5546] ROM "IC/rdState" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element conv/sumData2_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:96]
+WARNING: [Synth 8-6014] Unused sequential element conv/sumData1_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/conv.v:95]
+WARNING: [Synth 8-6014] Unused sequential element IC/lB0/rdPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:50]
+WARNING: [Synth 8-6014] Unused sequential element IC/lB0/wrPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:45]
+WARNING: [Synth 8-6014] Unused sequential element IC/lB1/rdPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:50]
+WARNING: [Synth 8-6014] Unused sequential element IC/lB1/wrPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:45]
+WARNING: [Synth 8-6014] Unused sequential element IC/lB2/rdPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:50]
+WARNING: [Synth 8-6014] Unused sequential element IC/lB2/wrPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:45]
+WARNING: [Synth 8-6014] Unused sequential element IC/lB3/rdPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:50]
+WARNING: [Synth 8-6014] Unused sequential element IC/lB3/wrPntr_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/lineBuffer.v:45]
+WARNING: [Synth 8-6014] Unused sequential element IC/totalPixelCounter_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:55]
+WARNING: [Synth 8-6014] Unused sequential element IC/rdCounter_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:129]
+WARNING: [Synth 8-6014] Unused sequential element IC/pixelCounter_reg was removed.  [V:/viv_wd/Edge_detection/Edge_detection.srcs/sources_1/new/imageControl.v:99]
+DSP Report: Generating DSP conv/convolved_data_int2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register conv/sumData2_reg is absorbed into DSP conv/convolved_data_int2_reg.
+DSP Report: register conv/sumData2_reg is absorbed into DSP conv/convolved_data_int2_reg.
+DSP Report: register conv/convolved_data_int2_reg is absorbed into DSP conv/convolved_data_int2_reg.
+DSP Report: operator conv/convolved_data_int20 is absorbed into DSP conv/convolved_data_int2_reg.
+DSP Report: Generating DSP conv/convolved_data_int1_reg, operation Mode is: (A2*B2)'.
+DSP Report: register conv/sumData1_reg is absorbed into DSP conv/convolved_data_int1_reg.
+DSP Report: register conv/sumData1_reg is absorbed into DSP conv/convolved_data_int1_reg.
+DSP Report: register conv/convolved_data_int1_reg is absorbed into DSP conv/convolved_data_int1_reg.
+DSP Report: operator conv/convolved_data_int10 is absorbed into DSP conv/convolved_data_int1_reg.
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][0]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][1]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][2]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][3]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][4]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][5]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][6]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][7]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][8]' (FD) to 'conv/multData1_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[1][9]' (FD) to 'conv/multData1_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[2][0]' (FD) to 'conv/multData2_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[2][8]' (FD) to 'conv/multData1_reg[2][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[3][0]' (FD) to 'conv/multData1_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[3][9]' (FD) to 'conv/multData1_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[3][10]' (FD) to 'conv/multData1_reg[6][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[5][0]' (FD) to 'conv/multData1_reg[6][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[5][9]' (FD) to 'conv/multData1_reg[5][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[6][0]' (FD) to 'conv/multData2_reg[6][0]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[6][8]' (FD) to 'conv/multData1_reg[6][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[6][9]' (FD) to 'conv/multData1_reg[6][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[6][10]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][0]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][1]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][2]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][3]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][4]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][5]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][6]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][7]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][8]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData1_reg[7][9]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[1][0]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[1][9]' (FD) to 'conv/multData2_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[1][10]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[2][8]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[2][9]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[2][10]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][0]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][1]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][2]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][3]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][4]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][5]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][6]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][7]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][8]' (FD) to 'conv/multData2_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[3][9]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][0]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][1]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][2]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][3]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][4]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][5]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][6]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][7]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][8]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[4][9]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][0]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][1]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][2]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][3]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][4]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][5]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][6]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][7]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][8]' (FD) to 'conv/multData2_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[5][9]' (FD) to 'conv/multData2_reg[7][0]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[6][8]' (FD) to 'conv/multData2_reg[6][9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conv/multData2_reg[7][0] )
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[7][9]' (FD) to 'conv/multData2_reg[7][10]'
+INFO: [Synth 8-3886] merging instance 'conv/multData2_reg[8][8]' (FD) to 'conv/multData2_reg[8][9]'
+WARNING: [Synth 8-3332] Sequential element (conv/multData2_reg[7][0]) is unused and will be removed from module imageProcessTop.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 804.781 ; gain = 505.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------+-----------------+-----------+----------------------+------------------------------+
+|Module Name     | RTL Object      | Inference | Size (Depth x Width) | Primitives                   | 
++----------------+-----------------+-----------+----------------------+------------------------------+
+|imageProcessTop | IC/lB2/line_reg | Implied   | 512 x 8              | RAM64X1D x 48  RAM64M x 48   | 
+|imageProcessTop | IC/lB1/line_reg | Implied   | 512 x 8              | RAM64X1D x 48  RAM64M x 48   | 
+|imageProcessTop | IC/lB0/line_reg | Implied   | 512 x 8              | RAM64X1D x 48  RAM64M x 48   | 
+|imageProcessTop | IC/lB3/line_reg | Implied   | 512 x 8              | RAM64X1D x 48  RAM64M x 48   | 
++----------------+-----------------+-----------+----------------------+------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|conv        | (A2*B2)'    | 11     | 11     | -      | -      | 22     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|conv        | (A2*B2)'    | 11     | 11     | -      | -      | 22     | 1    | 1    | -    | -    | -     | 1    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 850.629 ; gain = 551.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 851.820 ; gain = 552.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++----------------+-----------------+-----------+----------------------+------------------------------+
+|Module Name     | RTL Object      | Inference | Size (Depth x Width) | Primitives                   | 
++----------------+-----------------+-----------+----------------------+------------------------------+
+|imageProcessTop | IC/lB2/line_reg | Implied   | 512 x 8              | RAM64X1D x 48  RAM64M x 48   | 
+|imageProcessTop | IC/lB1/line_reg | Implied   | 512 x 8              | RAM64X1D x 48  RAM64M x 48   | 
+|imageProcessTop | IC/lB0/line_reg | Implied   | 512 x 8              | RAM64X1D x 48  RAM64M x 48   | 
+|imageProcessTop | IC/lB3/line_reg | Implied   | 512 x 8              | RAM64X1D x 48  RAM64M x 48   | 
++----------------+-----------------+-----------+----------------------+------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[5]' (FDRE) to 'IC/lB0/rdPntr_reg[5]'
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[4]' (FDRE) to 'IC/lB0/rdPntr_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[3]' (FDRE) to 'IC/lB0/rdPntr_reg[3]'
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[2]' (FDRE) to 'IC/lB0/rdPntr_reg[2]'
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[1]' (FDRE) to 'IC/lB0/rdPntr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[0]' (FDRE) to 'IC/lB0/rdPntr_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[5]' (FDRE) to 'IC/lB1/rdPntr_reg[5]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[4]' (FDRE) to 'IC/lB1/rdPntr_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[3]' (FDRE) to 'IC/lB1/rdPntr_reg[3]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[2]' (FDRE) to 'IC/lB1/rdPntr_reg[2]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[1]' (FDRE) to 'IC/lB1/rdPntr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[0]' (FDRE) to 'IC/lB1/rdPntr_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IC/lB2/rdPntr_reg_rep[5]' (FDRE) to 'IC/lB2/rdPntr_reg[5]'
+INFO: [Synth 8-3886] merging instance 'IC/lB2/rdPntr_reg_rep[4]' (FDRE) to 'IC/lB2/rdPntr_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IC/lB2/rdPntr_reg_rep[3]' (FDRE) to 'IC/lB2/rdPntr_reg[3]'
+INFO: [Synth 8-3886] merging instance 'IC/lB2/rdPntr_reg_rep[2]' (FDRE) to 'IC/lB2/rdPntr_reg[2]'
+INFO: [Synth 8-3886] merging instance 'IC/lB2/rdPntr_reg_rep[1]' (FDRE) to 'IC/lB2/rdPntr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IC/lB2/rdPntr_reg_rep[0]' (FDRE) to 'IC/lB2/rdPntr_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IC/lB3/rdPntr_reg_rep[5]' (FDRE) to 'IC/lB3/rdPntr_reg[5]'
+INFO: [Synth 8-3886] merging instance 'IC/lB3/rdPntr_reg_rep[4]' (FDRE) to 'IC/lB3/rdPntr_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IC/lB3/rdPntr_reg_rep[3]' (FDRE) to 'IC/lB3/rdPntr_reg[3]'
+INFO: [Synth 8-3886] merging instance 'IC/lB3/rdPntr_reg_rep[2]' (FDRE) to 'IC/lB3/rdPntr_reg[2]'
+INFO: [Synth 8-3886] merging instance 'IC/lB3/rdPntr_reg_rep[1]' (FDRE) to 'IC/lB3/rdPntr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IC/lB3/rdPntr_reg_rep[0]' (FDRE) to 'IC/lB3/rdPntr_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[6]' (FDRE) to 'IC/lB0/rdPntr_reg[6]'
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[7]' (FDRE) to 'IC/lB0/rdPntr_reg[7]'
+INFO: [Synth 8-3886] merging instance 'IC/lB0/rdPntr_reg_rep[8]' (FDRE) to 'IC/lB0/rdPntr_reg[8]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[6]' (FDRE) to 'IC/lB1/rdPntr_reg[6]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[7]' (FDRE) to 'IC/lB1/rdPntr_reg[7]'
+INFO: [Synth 8-3886] merging instance 'IC/lB1/rdPntr_reg_rep[8]' (FDRE) to 'IC/lB1/rdPntr_reg[8]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 884.871 ; gain = 585.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 884.871 ; gain = 585.625
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 884.871 ; gain = 585.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 884.871 ; gain = 585.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 884.871 ; gain = 585.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 884.871 ; gain = 585.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 884.871 ; gain = 585.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|imageProcessTop | conv/o_convolved_data_valid_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++----------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |outputBuffer  |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |outputBuffer |     1|
+|2     |BUFG         |     1|
+|3     |CARRY4       |    36|
+|4     |DSP48E1      |     2|
+|5     |LUT1         |    22|
+|6     |LUT2         |   139|
+|7     |LUT3         |   150|
+|8     |LUT4         |    45|
+|9     |LUT5         |    45|
+|10    |LUT6         |   418|
+|11    |MUXF7        |    48|
+|12    |RAM64M       |   192|
+|13    |RAM64X1D     |   192|
+|14    |SRL16E       |     1|
+|15    |FDRE         |   193|
+|16    |IBUF         |    12|
+|17    |OBUF         |    11|
++------+-------------+------+
+
+Report Instance Areas: 
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             |  1520|
+|2     |  IC     |imageControl |  1246|
+|3     |    lB0  |lineBuffer   |   260|
+|4     |    lB1  |lineBuffer_0 |   269|
+|5     |    lB2  |lineBuffer_1 |   269|
+|6     |    lB3  |lineBuffer_2 |   276|
+|7     |  conv   |conv         |   236|
++------+---------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 884.871 ; gain = 585.625
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 884.871 ; gain = 231.938
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 884.871 ; gain = 585.625
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 482 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 384 instances were transformed.
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 192 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 192 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+130 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:42 . Memory (MB): peak = 884.871 ; gain = 597.113
+INFO: [Common 17-1381] The checkpoint 'V:/viv_wd/Edge_detection/Edge_detection.runs/synth_1/imageProcessTop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file imageProcessTop_utilization_synth.rpt -pb imageProcessTop_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 884.871 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 17 23:38:40 2024...

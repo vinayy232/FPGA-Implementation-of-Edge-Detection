@@ -1,0 +1,161 @@
+19:41:20 INFO  : Registering command handlers for SDK TCF services
+19:41:20 INFO  : Launching XSCT server: xsct.bat -interactive V:\viv_wd\imageProcessingSystem\imageProcessingSystem.sdk\temp_xsdb_launch_script.tcl
+19:41:24 INFO  : XSCT server has started successfully.
+19:41:30 INFO  : Successfully done setting XSCT server connection channel  
+19:41:30 INFO  : Successfully done setting SDK workspace  
+19:41:30 INFO  : Processing command line option -hwspec V:/viv_wd/imageProcessingSystem/imageProcessingSystem.sdk/imageProcessingSystem_wrapper.hdf.
+20:30:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+20:30:12 INFO  : 'fpga -state' command is executed.
+20:30:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:12 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:30:12 INFO  : 'jtag frequency' command is executed.
+20:30:12 INFO  : Sourcing of 'V:/viv_wd/imageProcessingSystem/imageProcessingSystem.sdk/imageProcessingSystem_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:30:12 INFO  : Context for 'APU' is selected.
+20:30:13 INFO  : Hardware design information is loaded from 'V:/viv_wd/imageProcessingSystem/imageProcessingSystem.sdk/imageProcessingSystem_wrapper_hw_platform_0/system.hdf'.
+20:30:13 INFO  : 'configparams force-mem-access 1' command is executed.
+20:30:13 INFO  : Context for 'APU' is selected.
+20:30:13 INFO  : 'stop' command is executed.
+20:30:14 INFO  : 'ps7_init' command is executed.
+20:30:14 INFO  : 'ps7_post_config' command is executed.
+20:30:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:30:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:30:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:30:15 INFO  : The application 'V:/viv_wd/imageProcessingSystem/imageProcessingSystem.sdk/imageIpTest/Debug/imageIpTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:30:15 INFO  : 'configparams force-mem-access 0' command is executed.
+20:30:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source V:/viv_wd/imageProcessingSystem/imageProcessingSystem.sdk/imageProcessingSystem_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw V:/viv_wd/imageProcessingSystem/imageProcessingSystem.sdk/imageProcessingSystem_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow V:/viv_wd/imageProcessingSystem/imageProcessingSystem.sdk/imageIpTest/Debug/imageIpTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:30:15 INFO  : Memory regions updated for context APU
+20:30:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:30:15 INFO  : 'con' command is executed.
+20:30:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+20:30:15 INFO  : Launch script is exported to file 'V:\viv_wd\imageProcessingSystem\imageProcessingSystem.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+22:41:19 INFO  : Disconnected from the channel tcfchan#1.
+00:14:32 INFO  : Registering command handlers for SDK TCF services
+00:14:32 INFO  : Launching XSCT server: xsct.bat -interactive V:\viv_wd\Edge_d_IPS\Edge_d_IPS.sdk\temp_xsdb_launch_script.tcl
+00:14:35 INFO  : XSCT server has started successfully.
+00:14:39 INFO  : Successfully done setting XSCT server connection channel  
+00:14:39 INFO  : Processing command line option -hwspec V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper.hdf.
+00:14:39 INFO  : Successfully done setting SDK workspace  
+00:30:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+00:30:20 INFO  : 'fpga -state' command is executed.
+00:30:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:30:20 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+00:30:20 INFO  : 'jtag frequency' command is executed.
+00:30:20 INFO  : Sourcing of 'V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper_hw_platform_1/ps7_init.tcl' is done.
+00:30:20 INFO  : Context for 'APU' is selected.
+00:30:20 INFO  : Hardware design information is loaded from 'V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper_hw_platform_1/system.hdf'.
+00:30:20 INFO  : 'configparams force-mem-access 1' command is executed.
+00:30:20 INFO  : Context for 'APU' is selected.
+00:30:20 INFO  : 'stop' command is executed.
+00:30:22 INFO  : 'ps7_init' command is executed.
+00:30:22 INFO  : 'ps7_post_config' command is executed.
+00:30:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:30:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:30:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:30:23 INFO  : The application 'V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/EdgeDetection/Debug/EdgeDetection.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:30:23 INFO  : 'configparams force-mem-access 0' command is executed.
+00:30:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper_hw_platform_1/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper_hw_platform_1/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/EdgeDetection/Debug/EdgeDetection.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:30:23 INFO  : Memory regions updated for context APU
+00:30:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:30:23 INFO  : 'con' command is executed.
+00:30:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+00:30:23 INFO  : Launch script is exported to file 'V:\viv_wd\Edge_d_IPS\Edge_d_IPS.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local_(1).tcl'
+00:54:05 INFO  : Disconnected from the channel tcfchan#1.
+01:15:04 INFO  : Registering command handlers for SDK TCF services
+01:15:04 INFO  : Launching XSCT server: xsct.bat -interactive V:\viv_wd\Edge_d_IPS\Edge_d_IPS.sdk\temp_xsdb_launch_script.tcl
+01:15:06 INFO  : XSCT server has started successfully.
+01:15:06 INFO  : Processing command line option -hwspec V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper.hdf.
+01:15:07 INFO  : Successfully done setting XSCT server connection channel  
+01:15:07 INFO  : Checking for hwspec changes in the project imageProcessingSystem_wrapper_hw_platform_1.
+01:15:10 INFO  : Successfully done setting SDK workspace  
+01:20:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+01:20:19 INFO  : 'fpga -state' command is executed.
+01:20:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:20:19 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+01:20:19 INFO  : 'jtag frequency' command is executed.
+01:20:19 INFO  : Sourcing of 'V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper_hw_platform_1/ps7_init.tcl' is done.
+01:20:19 INFO  : Context for 'APU' is selected.
+01:20:19 INFO  : Hardware design information is loaded from 'V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper_hw_platform_1/system.hdf'.
+01:20:19 INFO  : 'configparams force-mem-access 1' command is executed.
+01:20:19 INFO  : Context for 'APU' is selected.
+01:20:19 INFO  : 'stop' command is executed.
+01:20:21 INFO  : 'ps7_init' command is executed.
+01:20:21 INFO  : 'ps7_post_config' command is executed.
+01:20:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:21 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:20:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:22 INFO  : The application 'V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/EdgeDetection/Debug/EdgeDetection.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:20:22 INFO  : 'configparams force-mem-access 0' command is executed.
+01:20:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper_hw_platform_1/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper_hw_platform_1/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/EdgeDetection/Debug/EdgeDetection.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:20:22 INFO  : Memory regions updated for context APU
+01:20:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:22 INFO  : 'con' command is executed.
+01:20:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+01:20:22 INFO  : Launch script is exported to file 'V:\viv_wd\Edge_d_IPS\Edge_d_IPS.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local_(1).tcl'
+01:30:18 INFO  : Disconnected from the channel tcfchan#1.
+19:02:28 INFO  : Launching XSCT server: xsct.bat -interactive V:\viv_wd\Edge_d_IPS\Edge_d_IPS.sdk\temp_xsdb_launch_script.tcl
+19:02:28 INFO  : Registering command handlers for SDK TCF services
+19:02:31 INFO  : XSCT server has started successfully.
+19:02:31 INFO  : Successfully done setting XSCT server connection channel  
+19:02:31 INFO  : Successfully done setting SDK workspace  
+19:02:31 INFO  : Processing command line option -hwspec V:/viv_wd/Edge_d_IPS/Edge_d_IPS.sdk/imageProcessingSystem_wrapper.hdf.
+19:02:31 INFO  : Checking for hwspec changes in the project imageProcessingSystem_wrapper_hw_platform_1.

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Nov 18 00:00:34 2024
+# Process ID: 21784
+# Current directory: V:/viv_wd/Edge_d_IPS/Edge_d_IPS.runs/imageProcessingSystem_EdgeDetection_0_0_synth_1
+# Command line: vivado.exe -log imageProcessingSystem_EdgeDetection_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source imageProcessingSystem_EdgeDetection_0_0.tcl
+# Log file: V:/viv_wd/Edge_d_IPS/Edge_d_IPS.runs/imageProcessingSystem_EdgeDetection_0_0_synth_1/imageProcessingSystem_EdgeDetection_0_0.vds
+# Journal file: V:/viv_wd/Edge_d_IPS/Edge_d_IPS.runs/imageProcessingSystem_EdgeDetection_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source imageProcessingSystem_EdgeDetection_0_0.tcl -notrace

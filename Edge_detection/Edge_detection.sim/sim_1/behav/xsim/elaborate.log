@@ -1,0 +1,58 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: V:/Vivado/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 3d0864e8f1cd440082ead27fdc012e06 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lineBuffer
+Compiling module xil_defaultlib.imageControl
+Compiling module xil_defaultlib.conv
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.VCC
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.FDSE_default
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.outputBuffer_rd_fwft
+Compiling module xil_defaultlib.outputBuffer_rd_status_flags_ss
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.outputBuffer_rd_bin_cntr
+Compiling module xil_defaultlib.outputBuffer_rd_logic
+Compiling module unisims_ver.LUT5
+Compiling module xil_defaultlib.outputBuffer_wr_pf_ss
+Compiling module xil_defaultlib.outputBuffer_wr_status_flags_ss
+Compiling module xil_defaultlib.outputBuffer_wr_bin_cntr
+Compiling module xil_defaultlib.outputBuffer_wr_logic
+Compiling module unisims_ver.SRL16E_default
+Compiling module unisims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module unisims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module xil_defaultlib.outputBuffer_blk_mem_gen_prim_wr...
+Compiling module xil_defaultlib.outputBuffer_blk_mem_gen_prim_wi...
+Compiling module xil_defaultlib.outputBuffer_blk_mem_gen_generic...
+Compiling module xil_defaultlib.outputBuffer_blk_mem_gen_top
+Compiling module xil_defaultlib.outputBuffer_blk_mem_gen_v8_4_1_...
+Compiling module xil_defaultlib.outputBuffer_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.outputBuffer_memory
+Compiling module xil_defaultlib.outputBuffer_xpm_cdc_sync_rst
+Compiling module xil_defaultlib.outputBuffer_reset_blk_ramfifo
+Compiling module xil_defaultlib.outputBuffer_fifo_generator_ramf...
+Compiling module xil_defaultlib.outputBuffer_fifo_generator_top
+Compiling module xil_defaultlib.outputBuffer_fifo_generator_v13_...
+Compiling module xil_defaultlib.outputBuffer_fifo_generator_v13_...
+Compiling module xil_defaultlib.outputBuffer
+Compiling module xil_defaultlib.imageProcessTop
+Compiling module xil_defaultlib.tb
+WARNING: [XSIM 43-3373] "V:/viv_wd/Edge_detection/Edge_detection.srcs/sim_1/new/tb.v" Line 70. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "V:/viv_wd/Edge_detection/Edge_detection.srcs/sim_1/new/tb.v" Line 77. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "V:/viv_wd/Edge_detection/Edge_detection.srcs/sim_1/new/tb.v" Line 90. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
