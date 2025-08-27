@@ -23,3 +23,5 @@ high-performance image processing, paving the way for applications in real-time
 environments. This report details the system’s development process, from architecture
 design and module configuration to results validation, offering a comprehensive
 overview of the work done.
+
+<img width="886" height="438" alt="image" src="https://github.com/user-attachments/assets/971e11cd-12f0-41c2-892c-d041e8798c9c" />
